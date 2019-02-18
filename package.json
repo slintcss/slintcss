@@ -4,6 +4,7 @@
   "description": "A frontend framework for faster development",
   "main": "app.js",
   "scripts": {
+    "compile:sass": "node-sass ./sass/main.scss ./css/slintcss.css -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

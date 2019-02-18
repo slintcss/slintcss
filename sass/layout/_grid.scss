@@ -1,0 +1,156 @@
+.row {
+  max-width: $grid-width;
+  margin: 0 auto;
+
+  @include clearfix;
+
+  [class^="col-"] {
+    float: left;
+    background: red;
+    margin-bottom: 1rem;
+
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
+
+  }
+
+  .col {
+    &-2 {
+      width: calc((100% - #{$gutter-horizontal}) / 2);
+
+      &-md {
+        width: calc((100% - #{$gutter-horizontal}) / 2);
+
+        // Check for tab screen
+        @include respond(tab-port) {
+          width: 100% !important;
+        }
+      }
+
+      &-sm {
+        width: calc((100% - #{$gutter-horizontal}) / 2);
+
+        // Check for phone screen
+        @include respond(phone) {
+          width: 100% !important;
+        }
+      }
+    }
+
+    &-3 {
+      width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+
+      &-md {
+        width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+
+        // Check for tab screen
+        @include respond(tab-port) {
+          width: 100% !important;
+        }
+      }
+
+      &-sm {
+        width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+
+        // Check for phone screen
+        @include respond(phone) {
+          width: 100% !important;
+        }
+      }
+    }
+
+    &-4 {
+      width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
+
+      &-md {
+        width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
+
+        // Check for tab screen
+        @include respond(tab-port) {
+          width: 100% !important;
+        }
+      }
+
+      &-sm {
+        width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
+
+        // Check for phone screen
+        @include respond(phone) {
+          width: 100% !important;
+        }
+      }
+    }
+
+  }
+
+  .col-2 {
+    &-3 {
+      width: calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
+
+      &-md {
+        width: calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
+
+        // Check for tab screen
+        @include respond(tab-port) {
+          width: 100% !important;
+        }
+      }
+
+      &-sm {
+        width: calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
+
+        // Check for phone screen
+        @include respond(phone) {
+          width: 100% !important;
+        }
+      }
+    }
+
+    &-4 {
+      width: calc(2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal});
+
+      &-md {
+        width: calc(2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal});
+
+        // Check for tab screen
+        @include respond(tab-port) {
+          width: 100% !important;
+        }
+      }
+
+      &-sm {
+        width: calc(2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal});
+
+        // Check for phone screen
+        @include respond(phone) {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+
+  .col-3-4 {
+    width: calc(3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal});
+
+    &-md {
+      width: calc(3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal});
+
+      // Check for tab screen
+      @include respond(tab-port) {
+        width: 100% !important;
+      }
+    }
+
+    &-sm {
+      width: calc(3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal});
+
+      // Check for phone screen
+      @include respond(phone) {
+        width: 100% !important;
+      }
+    }
+  }
+
+
+}
