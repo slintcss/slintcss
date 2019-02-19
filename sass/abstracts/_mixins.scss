@@ -6,20 +6,6 @@
   }
 }
 
-// Media Query Manager
-/*
-0 - 600px: phone;
-600 - 900px: Tablet portrait
-900 - 1200px: Tablet landscape
-[1200 -1800px] normal styles
-1800px +: Big desktop
-
-$breakpoints argument
-- phone
-- tab-port
-- tab-land
-- big-desktop
-*/
 @mixin respond($breakpoint) {
 
   // 600px
