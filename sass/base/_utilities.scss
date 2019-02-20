@@ -14,7 +14,6 @@
 .container {
   margin: 0 auto;
   width: 70%;
-  padding: 0 .4rem;
   transition: all .8s;
 
   @include respond(tab-port) {

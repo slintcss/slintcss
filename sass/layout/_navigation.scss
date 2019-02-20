@@ -1,13 +1,18 @@
 // Appbar Navigation Responsive
 .appbar,
-.appbar-nav,
 .appbar-md,
 .appbar-sm {
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 8vh;
-  background-color: $color-blue;
+  background: inherit;
+  padding: 0 15%;
+  transition: all .8s;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
 
   &-logo {
     color: inherit;

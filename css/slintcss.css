@@ -71,7 +71,6 @@ p,
 .container {
   margin: 0 auto;
   width: 70%;
-  padding: 0 .4rem;
   transition: all .8s; }
   @media (max-width: 56.25em) {
     .container {
@@ -233,16 +232,21 @@ p,
           width: 100% !important; } }
 
 .appbar,
-.appbar-nav,
 .appbar-md,
 .appbar-sm {
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 8vh;
-  background-color: #2196F3; }
+  background: inherit;
+  padding: 0 15%;
+  transition: all .8s; }
+  @media (max-width: 56.25em) {
+    .appbar,
+    .appbar-md,
+    .appbar-sm {
+      padding: 0; } }
   .appbar-logo,
-  .appbar-nav-logo,
   .appbar-md-logo,
   .appbar-sm-logo {
     color: inherit;
@@ -251,7 +255,6 @@ p,
     font-size: 20px;
     display: inline-block; }
   .appbar-list,
-  .appbar-nav-list,
   .appbar-md-list,
   .appbar-sm-list {
     display: flex;
@@ -259,12 +262,10 @@ p,
     width: 45%;
     transition: all 0.8s; }
   .appbar-item,
-  .appbar-nav-item,
   .appbar-md-item,
   .appbar-sm-item {
     list-style: none; }
   .appbar-link,
-  .appbar-nav-link,
   .appbar-md-link,
   .appbar-sm-link {
     color: inherit;
@@ -273,14 +274,12 @@ p,
     font-weight: bold;
     font-size: 14px; }
   .appbar-burger,
-  .appbar-nav-burger,
   .appbar-md-burger,
   .appbar-sm-burger {
     display: none;
     transform: translateX(50rem);
     transition: all 0.8s; }
     .appbar-burger div,
-    .appbar-nav-burger div,
     .appbar-md-burger div,
     .appbar-sm-burger div {
       width: 25px;
@@ -290,7 +289,6 @@ p,
       transition: all 0.5s; }
   @media (max-width: 56.25em) {
     .appbar-md .appbar-list,
-    .appbar-nav-md .appbar-list,
     .appbar-md-md .appbar-list,
     .appbar-sm-md .appbar-list {
       position: absolute;
@@ -306,24 +304,20 @@ p,
       transform: translateX(100%);
       transition: all 0.5s ease-in; }
     .appbar-md .appbar-item,
-    .appbar-nav-md .appbar-item,
     .appbar-md-md .appbar-item,
     .appbar-sm-md .appbar-item {
       opacity: 0; }
     .appbar-md .appbar-burger,
-    .appbar-nav-md .appbar-burger,
     .appbar-md-md .appbar-burger,
     .appbar-sm-md .appbar-burger {
       transform: translateX(0);
       display: block; }
     .appbar-md .appbar-list-active,
-    .appbar-nav-md .appbar-list-active,
     .appbar-md-md .appbar-list-active,
     .appbar-sm-md .appbar-list-active {
       transform: translateX(0); } }
   @media (max-width: 37.5em) {
     .appbar-sm .appbar-list,
-    .appbar-nav-sm .appbar-list,
     .appbar-md-sm .appbar-list,
     .appbar-sm-sm .appbar-list {
       position: absolute;
@@ -339,18 +333,15 @@ p,
       transform: translateX(100%);
       transition: all 0.5s ease-in; }
     .appbar-sm .appbar-item,
-    .appbar-nav-sm .appbar-item,
     .appbar-md-sm .appbar-item,
     .appbar-sm-sm .appbar-item {
       opacity: 0; }
     .appbar-sm .appbar-burger,
-    .appbar-nav-sm .appbar-burger,
     .appbar-md-sm .appbar-burger,
     .appbar-sm-sm .appbar-burger {
       transform: translateX(0);
       display: block; }
     .appbar-sm .appbar-list-active,
-    .appbar-nav-sm .appbar-list-active,
     .appbar-md-sm .appbar-list-active,
     .appbar-sm-sm .appbar-list-active {
       transform: translateX(0); } }
