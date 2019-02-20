@@ -1,0 +1,27 @@
+.f-left {
+  float: left;
+}
+
+.f-right {
+  float: right;
+}
+
+.container-full {
+  width: 100%;
+  padding: 0 .4rem;
+}
+
+.container {
+  margin: 0 auto;
+  width: 70%;
+  padding: 0 .4rem;
+  transition: all .8s;
+
+  @include respond(tab-port) {
+    width: 100%;
+  }
+}
+
+.appbar-blue {
+  background-color: $color-blue-2;
+}

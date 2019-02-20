@@ -1,0 +1,135 @@
+// Appbar Navigation Responsive
+.appbar,
+.appbar-nav,
+.appbar-md,
+.appbar-sm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 8vh;
+  background-color: $color-blue;
+
+  &-logo {
+    color: inherit;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+    display: inline-block;
+  }
+
+  &-list {
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+    transition: all 0.8s;
+  }
+
+  &-item {
+    list-style: none;
+  }
+
+  &-link {
+    color: inherit;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  &-burger {
+    display: none;
+    transform: translateX(50rem);
+    transition: all 0.8s;
+
+    div {
+      width: 25px;
+      height: 3px;
+      margin: 5px;
+      background-color: #e7e5e5;
+      transition: all 0.5s;
+    }
+  }
+
+  // Tab Screen
+  &-md {
+    @include respond(tab-port) {
+      .appbar {
+        &-list {
+          position: absolute;
+          right: 0;
+          height: 92vh;
+          top: 8vh;
+          background: inherit;
+          display: block;
+          text-align: center;
+          padding-top: 1.5rem;
+          font-size: 2rem;
+          width: 50%;
+          transform: translateX(100%);
+          transition: all 0.5s ease-in;
+        }
+
+        &-item {
+          opacity: 0;
+        }
+
+        &-burger {
+          transform: translateX(0);
+          display: block;
+        }
+
+        &-list-active {
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+
+  // Mobile Phone Screen
+  &-sm {
+    @include respond(phone) {
+      .appbar {
+        &-list {
+          position: absolute;
+          right: 0;
+          height: 92vh;
+          top: 8vh;
+          background: inherit;
+          display: block;
+          text-align: center;
+          padding-top: 1.5rem;
+          font-size: 2rem;
+          width: 50%;
+          transform: translateX(100%);
+          transition: all 0.5s ease-in;
+        }
+
+        &-item {
+          opacity: 0;
+        }
+
+        &-burger {
+          transform: translateX(0);
+          display: block;
+        }
+
+        &-list-active {
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+
+}
+
+.toggle .appbar-burger-line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .appbar-burger-line2 {
+  opacity: 0;
+}
+
+.toggle .appbar-burger-line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
