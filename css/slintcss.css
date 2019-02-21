@@ -19,7 +19,7 @@ html {
 
 body {
   box-sizing: border-box;
-  overflow: hidden; }
+  overflow-x: hidden; }
 
 a {
   text-decoration: none;
@@ -231,66 +231,52 @@ p,
         .row .col-3-4-sm {
           width: 100% !important; } }
 
-.appbar,
-.appbar-md,
-.appbar-sm {
+.appbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 8vh;
+  width: 100vw;
   background: inherit;
   padding: 0 15%;
+  position: relative;
+  z-index: 5000;
   transition: all .8s; }
   @media (max-width: 56.25em) {
-    .appbar,
-    .appbar-md,
-    .appbar-sm {
+    .appbar {
       padding: 0; } }
-  .appbar-logo,
-  .appbar-md-logo,
-  .appbar-sm-logo {
+  .appbar-logo {
     color: inherit;
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 20px;
     display: inline-block; }
-  .appbar-list,
-  .appbar-md-list,
-  .appbar-sm-list {
+  .appbar-list {
     display: flex;
     justify-content: space-around;
     width: 45%;
     transition: all 0.8s; }
-  .appbar-item,
-  .appbar-md-item,
-  .appbar-sm-item {
+  .appbar-item {
     list-style: none; }
-  .appbar-link,
-  .appbar-md-link,
-  .appbar-sm-link {
+  .appbar-link {
     color: inherit;
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;
     font-size: 14px; }
-  .appbar-burger,
-  .appbar-md-burger,
-  .appbar-sm-burger {
+  .appbar-burger {
     display: none;
+    padding: 0 1rem;
     transform: translateX(50rem);
     transition: all 0.8s; }
-    .appbar-burger div,
-    .appbar-md-burger div,
-    .appbar-sm-burger div {
+    .appbar-burger div {
       width: 25px;
       height: 3px;
       margin: 5px;
       background-color: #e7e5e5;
       transition: all 0.5s; }
   @media (max-width: 56.25em) {
-    .appbar-md .appbar-list,
-    .appbar-md-md .appbar-list,
-    .appbar-sm-md .appbar-list {
+    .appbar-md .appbar-list {
       position: absolute;
       right: 0;
       height: 92vh;
@@ -299,31 +285,25 @@ p,
       display: block;
       text-align: center;
       padding-top: 1.5rem;
+      margin-right: -.5rem;
       font-size: 2rem;
       width: 50%;
       transform: translateX(100%);
       transition: all 0.5s ease-in; }
-    .appbar-md .appbar-item,
-    .appbar-md-md .appbar-item,
-    .appbar-sm-md .appbar-item {
+    .appbar-md .appbar-item {
       opacity: 0; }
-    .appbar-md .appbar-burger,
-    .appbar-md-md .appbar-burger,
-    .appbar-sm-md .appbar-burger {
+    .appbar-md .appbar-burger {
       transform: translateX(0);
       display: block; }
-    .appbar-md .appbar-list-active,
-    .appbar-md-md .appbar-list-active,
-    .appbar-sm-md .appbar-list-active {
+    .appbar-md .appbar-list-active {
       transform: translateX(0); } }
   @media (max-width: 37.5em) {
-    .appbar-sm .appbar-list,
-    .appbar-md-sm .appbar-list,
-    .appbar-sm-sm .appbar-list {
+    .appbar-sm .appbar-list {
       position: absolute;
       right: 0;
       height: 92vh;
       top: 8vh;
+      margin-right: -.5rem;
       background: inherit;
       display: block;
       text-align: center;
@@ -332,25 +312,106 @@ p,
       width: 50%;
       transform: translateX(100%);
       transition: all 0.5s ease-in; }
-    .appbar-sm .appbar-item,
-    .appbar-md-sm .appbar-item,
-    .appbar-sm-sm .appbar-item {
+    .appbar-sm .appbar-item {
       opacity: 0; }
-    .appbar-sm .appbar-burger,
-    .appbar-md-sm .appbar-burger,
-    .appbar-sm-sm .appbar-burger {
+    .appbar-sm .appbar-burger {
       transform: translateX(0);
       display: block; }
-    .appbar-sm .appbar-list-active,
-    .appbar-md-sm .appbar-list-active,
-    .appbar-sm-sm .appbar-list-active {
+    .appbar-sm .appbar-list-active {
       transform: translateX(0); } }
+  .appbar-fixed {
+    position: fixed; }
+  .appbar-toggle .appbar-burger-line1 {
+    transform: rotate(-45deg) translate(-5px, 6px); }
+  .appbar-toggle .appbar-burger-line2 {
+    opacity: 0; }
+  .appbar-toggle .appbar-burger-line3 {
+    transform: rotate(45deg) translate(-5px, -6px); }
 
-.toggle .appbar-burger-line1 {
-  transform: rotate(-45deg) translate(-5px, 6px); }
-
-.toggle .appbar-burger-line2 {
-  opacity: 0; }
-
-.toggle .appbar-burger-line3 {
-  transform: rotate(45deg) translate(-5px, -6px); }
+.bottomappbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 8vh;
+  width: 100vw;
+  transition: all .8s; }
+  @media (max-width: 56.25em) {
+    .bottomappbar {
+      justify-content: space-around; } }
+  .bottomappbar-logo {
+    color: inherit;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+    display: inline-block; }
+  .bottomappbar-list {
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+    transition: all 1s; }
+  .bottomappbar-item {
+    list-style: none; }
+  .bottomappbar-link {
+    color: inherit;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px; }
+  .bottomappbar-icon, .bottomappbar-icon::before {
+    display: none; }
+  .bottomappbar-bars, .bottomappbar-bars::before {
+    display: none; }
+  @media (max-width: 56.25em) {
+    .bottomappbar-md .bottomappbar-list {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      background: inherit;
+      width: 100%;
+      margin-right: -100rem; }
+    .bottomappbar-md .bottomappbar-item {
+      margin: 0 -.1rem;
+      padding: .7rem 2rem; }
+      .bottomappbar-md .bottomappbar-item:hover {
+        background: inherit; }
+    .bottomappbar-md .bottomappbar-icon, .bottomappbar-md .bottomappbar-icon::before {
+      display: block;
+      text-align: center; }
+    .bottomappbar-md .bottomappbar-bars, .bottomappbar-md .bottomappbar-bars::before {
+      display: block;
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      margin: 0 .6rem .6rem 0;
+      background: #d3d3d3;
+      font-size: 1.8rem;
+      padding: .7rem;
+      cursor: pointer; } }
+  @media (max-width: 37.5em) {
+    .bottomappbar-sm .bottomappbar-list {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      background: inherit;
+      width: 100%;
+      margin-right: -100rem; }
+    .bottomappbar-sm .bottomappbar-item {
+      margin: 0 -.1rem;
+      padding: .7rem 2rem; }
+      .bottomappbar-sm .bottomappbar-item:hover {
+        background: inherit; }
+    .bottomappbar-sm .bottomappbar-icon, .bottomappbar-sm .bottomappbar-icon::before {
+      display: block;
+      text-align: center; }
+    .bottomappbar-sm .bottomappbar-bars, .bottomappbar-sm .bottomappbar-bars::before {
+      display: block;
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      margin: 0 .6rem .6rem 0;
+      background: #d3d3d3;
+      font-size: 1.8rem;
+      padding: .7rem;
+      cursor: pointer; } }
+  .bottomappbar-list-active {
+    margin-right: 0 !important; }
