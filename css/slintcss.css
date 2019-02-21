@@ -241,7 +241,7 @@ p,
   padding: 0 15%;
   position: relative;
   z-index: 5000;
-  transition: all .8s; }
+  transition: all 0.8s; }
   @media (max-width: 56.25em) {
     .appbar {
       padding: 0; } }
@@ -285,7 +285,7 @@ p,
       display: block;
       text-align: center;
       padding-top: 1.5rem;
-      margin-right: -.5rem;
+      margin-right: -0.5rem;
       font-size: 2rem;
       width: 50%;
       transform: translateX(100%);
@@ -303,7 +303,7 @@ p,
       right: 0;
       height: 92vh;
       top: 8vh;
-      margin-right: -.5rem;
+      margin-right: -0.5rem;
       background: inherit;
       display: block;
       text-align: center;
@@ -334,7 +334,7 @@ p,
   align-items: center;
   min-height: 8vh;
   width: 100vw;
-  transition: all .8s; }
+  transition: all 0.8s; }
   @media (max-width: 56.25em) {
     .bottomappbar {
       justify-content: space-around; } }
@@ -367,11 +367,10 @@ p,
       bottom: 0;
       right: 0;
       background: inherit;
-      width: 100%;
+      width: 100vw;
       margin-right: -100rem; }
     .bottomappbar-md .bottomappbar-item {
-      margin: 0 -.1rem;
-      padding: .7rem 2rem; }
+      padding: 0.5rem 0; }
       .bottomappbar-md .bottomappbar-item:hover {
         background: inherit; }
     .bottomappbar-md .bottomappbar-icon, .bottomappbar-md .bottomappbar-icon::before {
@@ -382,10 +381,10 @@ p,
       position: fixed;
       right: 0;
       bottom: 0;
-      margin: 0 .6rem .6rem 0;
+      margin: 0 0.6rem 0.6rem 0;
       background: #d3d3d3;
       font-size: 1.8rem;
-      padding: .7rem;
+      padding: 0.7rem;
       cursor: pointer; } }
   @media (max-width: 37.5em) {
     .bottomappbar-sm .bottomappbar-list {
@@ -393,11 +392,10 @@ p,
       bottom: 0;
       right: 0;
       background: inherit;
-      width: 100%;
+      width: 100vw;
       margin-right: -100rem; }
     .bottomappbar-sm .bottomappbar-item {
-      margin: 0 -.1rem;
-      padding: .7rem 2rem; }
+      padding: 0.5rem 0; }
       .bottomappbar-sm .bottomappbar-item:hover {
         background: inherit; }
     .bottomappbar-sm .bottomappbar-icon, .bottomappbar-sm .bottomappbar-icon::before {
@@ -408,10 +406,10 @@ p,
       position: fixed;
       right: 0;
       bottom: 0;
-      margin: 0 .6rem .6rem 0;
+      margin: 0 0.4rem 0.4rem 0;
       background: #d3d3d3;
       font-size: 1.8rem;
-      padding: .7rem;
+      padding: 0.7rem;
       cursor: pointer; } }
   .bottomappbar-list-active {
     margin-right: 0 !important; }
