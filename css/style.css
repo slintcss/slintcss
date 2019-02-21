@@ -1,0 +1,29 @@
+.appbar {
+  background: linear-gradient(#cc4e4e, #3a3ccf);
+}
+
+.bottomappbar {
+  background: linear-gradient(#cc4e4e, #3a3ccf);
+  color: aliceblue;
+}
+
+.card-animate {
+  height: 20rem;
+  /* margin-top: 9vh; */
+}
+
+.card-animate-y-front {
+  background-color: aqua;
+}
+
+.card-animate-y-back {
+  background-color: blueviolet;
+}
+
+.card-animate-x-front {
+  background-color: aqua;
+}
+
+.card-animate-x-back {
+  background-color: blueviolet;
+}
