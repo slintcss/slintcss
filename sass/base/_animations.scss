@@ -10,3 +10,16 @@
     transform: translateX(0px);
   }
 }
+
+// Carousel Fade
+@keyframes fadeNslide {
+  from {
+    opacity: .4;
+    transform: translateX(2rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
