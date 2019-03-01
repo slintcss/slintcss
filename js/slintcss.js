@@ -21,7 +21,7 @@ $(document).ready(function () {
     });
   });
 
-  // Carousel
+  // Carousel Function
   const carouselFunction = () => {
     let slideIndex = 1;
 
