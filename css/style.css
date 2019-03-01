@@ -27,3 +27,17 @@
 .card-animate-x-back {
   background-color: blueviolet;
 }
+
+.btn {
+  color: aliceblue;
+  background-color: tomato;
+}
+
+.btn:hover {
+  background-color: aqua;
+}
+
+.btn-outline {
+  border-color: teal;
+  color: teal;
+}

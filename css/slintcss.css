@@ -87,6 +87,24 @@ p,
 .appbar-blue {
   background-color: #1976D2; }
 
+.btn {
+  font-family: inherit;
+  font-size: 1.1rem;
+  padding: .1rem .3rem;
+  margin: 2px;
+  text-align: center;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: all .7s; }
+  .btn-block {
+    display: block;
+    width: 100%; }
+  .btn-outline {
+    background-color: transparent !important;
+    border: 1px solid;
+    color: inherit; }
+
 .card {
   width: 100%;
   border-radius: .3rem;
