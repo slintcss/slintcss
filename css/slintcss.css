@@ -7,6 +7,14 @@
     opacity: 1;
     transform: translateX(0px); } }
 
+@keyframes fadeNslide {
+  from {
+    opacity: .4;
+    transform: translateX(2rem); }
+  to {
+    opacity: 1;
+    transform: translateX(0); } }
+
 *,
 *::after,
 *::before {
@@ -144,6 +152,47 @@ p,
     transform: rotateX(-180deg); }
   .card-animate:hover .card-animate-y-back {
     transform: rotateY(0); }
+
+.carousel {
+  min-width: 100%;
+  position: relative; }
+  .carousel-slides {
+    display: none; }
+    .carousel-slides img {
+      width: 100%;
+      height: 20rem; }
+    .carousel-slides .text-caption {
+      text-align: center;
+      font-size: 1.5rem;
+      position: absolute;
+      padding: 8px;
+      left: 50%;
+      bottom: 20px;
+      transform: translate(-50%);
+      color: aliceblue;
+      font-weight: bold;
+      background-color: #000;
+      opacity: .7;
+      display: inline-block; }
+  .carousel-prev, .carousel-next {
+    position: absolute;
+    top: 40%;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 2rem;
+    padding: .4rem .8rem;
+    background-color: #000;
+    opacity: .4;
+    transition: all .6s; }
+    .carousel-prev:hover, .carousel-next:hover {
+      opacity: 1; }
+  .carousel-prev {
+    left: 0; }
+  .carousel-next {
+    right: 0; }
+  .carousel .fade {
+    animation-name: fadeNslide;
+    animation-duration: 2s; }
 
 .row {
   max-width: 114rem;
@@ -343,6 +392,7 @@ p,
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 20px;
+    padding-left: 1.3rem;
     display: inline-block; }
   .bottomappbar-list {
     display: flex;
