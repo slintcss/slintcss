@@ -24,3 +24,27 @@
 .appbar-blue {
   background-color: $color-blue-2;
 }
+
+.from-left {
+  animation: fromLeft 1s ease-in-out;
+}
+
+.from-right {
+  animation: fromRight 1s ease-in-out;
+}
+
+.from-up {
+  animation: fromUp 1s ease-in-out;
+}
+
+.from-down {
+  animation: fromDown 1s ease-in-out;
+}
+
+.bounce-from-left {
+  animation: bounceFromLeft 1.2s ease;
+}
+
+.bounce-from-right {
+  animation: bounceFromRight 1.2s ease;
+}
