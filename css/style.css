@@ -43,6 +43,6 @@
 }
 
 .btn-outline:hover {
-  border-color: palevioletred;
-  color: palevioletred;
+  border-color: rgb(151, 16, 61);
+  color: rgb(207, 24, 85);
 }

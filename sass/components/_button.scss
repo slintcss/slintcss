@@ -9,11 +9,13 @@
   cursor: pointer;
   transition: all .7s;
 
+  // btn-block
   &-block {
     display: block;
     width: 100%;
   }
 
+  // btn-outline
   &-outline {
     background-color: transparent !important;
     border: 1px solid;
