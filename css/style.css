@@ -41,3 +41,8 @@
   border-color: teal;
   color: teal;
 }
+
+.btn-outline:hover {
+  border-color: palevioletred;
+  color: palevioletred;
+}
