@@ -76,6 +76,7 @@
 @keyframes bounceFromLeft {
   0% {
     transform: translateX(-10rem) translateY(-5rem);
+    opacity: 0;
   }
 
   20% {
@@ -96,12 +97,14 @@
 
   100% {
     transform: translateX(0rem) translateY(0rem);
+    opacity: 1;
   }
 }
 
 @keyframes bounceFromRight {
   0% {
     transform: translateX(10rem) translateY(-5rem);
+    opacity: 0;
   }
 
   20% {
@@ -122,5 +125,6 @@
 
   100% {
     transform: translateX(0rem) translateY(0rem);
+    opacity: 1;
   }
 }
