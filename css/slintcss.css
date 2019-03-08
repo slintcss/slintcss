@@ -146,7 +146,8 @@ p,
   transition: all .8s; }
   @media (max-width: 56.25em) {
     .container {
-      width: 100%; } }
+      width: 100%;
+      padding: 0 5px; } }
 
 .appbar-blue {
   background-color: #1976D2; }
@@ -293,6 +294,122 @@ p,
   .carousel .fade {
     animation-name: fadeNslide;
     animation-duration: 2s; }
+
+.form-group {
+  height: 2rem; }
+  .form-group:not(:last-child) {
+    margin-bottom: 2rem; }
+
+.form-input {
+  width: 100%;
+  display: block;
+  font-family: inherit;
+  color: #999;
+  font-size: 1.5rem;
+  padding: .5rem;
+  border-radius: .3rem;
+  border: none;
+  border-bottom: 3px solid transparent; }
+  .form-input:focus {
+    outline: none;
+    border-bottom: 3px solid #2196F3; }
+  .form-input::-webkit-input-placeholder {
+    color: #999; }
+
+.form-label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: .7rem;
+  display: block;
+  transition: all .3s; }
+
+.form-input:placeholder-shown + .form-label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem); }
+
+.form-radio-group {
+  display: inline-block; }
+
+.form-radio-input {
+  display: none; }
+
+.form-radio-label {
+  font-size: 1.3rem;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-right: .4rem; }
+
+.form-radio-button {
+  width: 2rem;
+  height: 2rem;
+  border: 5px solid #2196F3;
+  border-radius: 100%;
+  display: inline-block;
+  position: relative;
+  margin-right: .2rem; }
+  .form-radio-button::after {
+    content: "";
+    display: block;
+    height: 1rem;
+    width: 1rem;
+    border: 5px solid #2196F3;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2196F3;
+    opacity: 0;
+    transition: opacity .2s; }
+
+.form-radio-input:checked ~ .form-radio-label .form-radio-button::after {
+  opacity: 1; }
+
+.form-checkbox-group {
+  display: inline-block; }
+
+.form-checkbox-input {
+  display: none; }
+
+.form-checkbox-label {
+  font-size: 1.3rem;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-right: .4rem; }
+
+.form-checkbox-button {
+  width: 2rem;
+  height: 2rem;
+  border: 5px solid #2196F3;
+  display: inline-block;
+  position: relative;
+  margin-right: .2rem; }
+  .form-checkbox-button::after {
+    content: "";
+    display: block;
+    height: 1rem;
+    width: 1rem;
+    border: 5px solid #2196F3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2196F3;
+    opacity: 0;
+    transition: opacity .2s; }
+
+.form-checkbox-input:checked ~ .form-checkbox-label .form-checkbox-button::after {
+  opacity: 1; }
 
 .row {
   max-width: 114rem;
