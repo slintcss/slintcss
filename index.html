@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Slintcss</title>
     <link rel="stylesheet" href="./css/slintcss.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/all.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -85,22 +87,44 @@
     <div class="container">
       <form action="" class="form">
         <div class="form-group">
-          <input type="text" id="name" class="form-input" placeholder="Say Something">
-          <label for="name" class="form-label">Name</label>
+          <label for="fullname" class="form-label">Name</label>
+          <input type="text" id="fullname" class="form-input" placeholder="Name">
+          <div class="feedback-message">Full name cannot be less than 5</div>
         </div>
         <div class="form-group">
-          <input type="text" id="email" class="form-input" placeholder="Say Something">
+          <label for="firstname" class="form-label">FirstName</label>
+          <input type="text" id="firstname" class="form-input" placeholder="FirstName">
+          <div class="feedback-message">Firstname cannot be less than 2</div>
+        </div>
+        <div class="form-group">
+          <label for="lastname" class="form-label">LastName</label>
+          <input type="text" id="lastname" class="form-input" placeholder="LastName">
+          <div class="feedback-message">Lastname cannot be less than 2</div>
+        </div>
+        <div class="form-group">
           <label for="email" class="form-label">Email</label>
+          <input type="text" id="email" class="form-input" placeholder="Email">
+          <div class="feedback-message">Invalid email</div>
+        </div>
+        <div class="form-group">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" id="password" class="form-input" placeholder="Password">
+          <div class="feedback-message">Password must at least have 1 alphabet, lowercase, uppercase, number and cannot be less than 8</div>
+        </div>
+        <div class="form-group">
+          <label for="password2" class="form-label">Retype Password</label>
+          <input type="password" id="password2" class="form-input" placeholder="Retype Password">
+          <div class="feedback-message">Passwords don't match</div>
         </div>
 
-        <div class="form-group">
+        <!-- <div class="form-group">
           <div class="form-radio-group">
-            <input type="radio" id="small" name="radio" class="form-radio-input">
-            <label for="small" class="form-radio-label"> <span class="form-radio-button"></span> Small</label>
+            <input type="radio" id="radio" name="radio" class="form-radio-input">
+            <label for="radio" class="form-radio-label"> <span class="form-radio-button"></span> Radio</label>
           </div>
           <div class="form-radio-group">
-            <input type="radio" id="large" name="radio" class="form-radio-input">
-            <label for="large" class="form-radio-label"> <span class="form-radio-button"></span> large</label>
+            <input type="radio" id="radio2" name="radio" class="form-radio-input">
+            <label for="radio2" class="form-radio-label"> <span class="form-radio-button"></span> Radio 2</label>
           </div>
         </div>
 
@@ -113,7 +137,7 @@
             <input type="checkbox" id="checked" name="checkbox" class="form-checkbox-input">
             <label for="checked" class="form-checkbox-label"> <span class="form-checkbox-button"></span> Checkbox 2</label>
           </div>
-        </div>
+        </div> -->
       </form>
     </div>
 

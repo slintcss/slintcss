@@ -295,39 +295,45 @@ p,
     animation-name: fadeNslide;
     animation-duration: 2s; }
 
-.form-group {
-  height: 2rem; }
-  .form-group:not(:last-child) {
-    margin-bottom: 2rem; }
+.form-group:not(:last-child) {
+  margin-bottom: 1rem; }
 
 .form-input {
   width: 100%;
+  height: 2.4rem;
   display: block;
   font-family: inherit;
   color: #999;
-  font-size: 1.5rem;
-  padding: .5rem;
+  font-size: 1rem;
+  padding: .3rem;
   border-radius: .3rem;
   border: none;
   border-bottom: 3px solid transparent; }
   .form-input:focus {
-    outline: none;
-    border-bottom: 3px solid #2196F3; }
+    outline: none; }
   .form-input::-webkit-input-placeholder {
     color: #999; }
+  .form-input-error {
+    border: 2px solid #F44336;
+    color: #F44336; }
+  .form-input-success {
+    border: 2px solid #8BC34A;
+    color: #8BC34A; }
+
+.form .feedback-message {
+  color: #F44336;
+  font-size: .8rem;
+  font-style: italic;
+  display: none; }
+  .form .feedback-message-error {
+    display: block; }
 
 .form-label {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-left: 2rem;
-  margin-top: .7rem;
+  color: #999;
+  font-size: 1rem;
+  font-weight: 500;
   display: block;
   transition: all .3s; }
-
-.form-input:placeholder-shown + .form-label {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-4rem); }
 
 .form-radio-group {
   display: inline-block; }

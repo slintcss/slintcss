@@ -25,15 +25,9 @@ $(document).ready(function() {
   // prettier-ignore
   const carouselFunction = () => {
     let slideIndex = 1;
-    const carousel = document.querySelector('.carousel');
-    const aPrev = document.createElement('a'); // create prev element
-    aPrev.className = `carousel-prev`; // add classname
-    aPrev.innerHTML = `<i class="fa fa-angle-left"></i>`; // insert i tag in the a tag
-    if(carousel !== null ) carousel.appendChild(aPrev); // appendchild into its parent
-    const aNext = document.createElement('a'); // create next element
-    aNext.className = `carousel-next`; // add classname
-    aNext.innerHTML = `<i class="fa fa-angle-right"></i>`; // insert i tag in the a tag
-    if(carousel !== null ) carousel.appendChild(aNext); // appendchild into its parent
+    $('<a class="carousel-prev"><i class="fa fa-angle-left"></i></a>').appendTo(".carousel");
+    $('<a class="carousel-next"><i class="fa fa-angle-right"></i></a>').appendTo(".carousel");
+
     const showImage = n => { // display image function
       const slide = $(".carousel-slides");
       if (n > slide.length) slideIndex = 1; // check if n is greater than slide.length
@@ -49,4 +43,88 @@ $(document).ready(function() {
     showImage(slideIndex); // run functio before anything
   }
   carouselFunction(); // call the main function
+
+  // Form validation
+  $("#fullname").keyup(function() {
+    const fullnameRegex = /^[a-zA-Z ]{5,25}$/;
+    const fullName = $("#fullname");
+    if (!fullnameRegex.test(fullName.val())) {
+      $(".feedback-message").addClass("feedback-message-error");
+      fullName.removeClass("form-input-success");
+      fullName.addClass("form-input-error");
+    } else {
+      $(".feedback-message").removeClass("feedback-message-error");
+      fullName.removeClass("form-input-error");
+      fullName.addClass("form-input-success");
+    }
+  });
+
+  $("#firstname").keyup(function () {
+    const firstnameRegex = /^[a-zA-Z ]{2,15}$/;
+    const firstname = $("#firstname");
+    if (!firstnameRegex.test(firstname.val())) {
+      $(".feedback-message").addClass("feedback-message-error");
+      firstname.removeClass("form-input-success");
+      firstname.addClass("form-input-error");
+    } else {
+      $(".feedback-message").removeClass("feedback-message-error");
+      firstname.removeClass("form-input-error");
+      firstname.addClass("form-input-success");
+    }
+  });
+
+  $("#lastname").keyup(function () {
+    const lastnameRegex = /^[a-zA-Z ]{2,15}$/;
+    const lastname = $("#lastname");
+    if (!lastnameRegex.test(lastname.val())) {
+      $(".feedback-message").addClass("feedback-message-error");
+      lastname.removeClass("form-input-success");
+      lastname.addClass("form-input-error");
+    } else {
+      $(".feedback-message").removeClass("feedback-message-error");
+      lastname.removeClass("form-input-error");
+      lastname.addClass("form-input-success");
+    }
+  });
+
+  $("#email").keyup(function() {
+    const emailRegex = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,10})$/;
+    const email = $("#email");
+    if (!emailRegex.test(email.val())) {
+      $(".feedback-message").addClass("feedback-message-error");
+      email.removeClass("form-input-success");
+      email.addClass("form-input-error");
+    } else {
+      $(".feedback-message").removeClass("feedback-message-error");
+      email.removeClass("form-input-error");
+      email.addClass("form-input-success");
+    }
+  });
+
+  $("#password").keyup(function() {
+    const password = $("#password");
+    const passwordRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
+    if (!passwordRegex.test(password.val())) {
+      $(".feedback-message").addClass("feedback-message-error");
+      password.removeClass("form-input-success");
+      password.addClass("form-input-error");
+    } else {
+      $(".feedback-message").removeClass("feedback-message-error");
+      password.removeClass("form-input-error");
+      password.addClass("form-input-success");
+    }
+  });
+
+  $("#password2").keyup(function () {
+    const password2 = $("#password2");
+    if ($("#password").val() !== $("#password2").val()) {
+      $(".feedback-message").addClass("feedback-message-error");
+      password2.removeClass("form-input-success");
+      password2.addClass("form-input-error");
+    } else {
+      $(".feedback-message").removeClass("feedback-message-error");
+      password2.removeClass("form-input-error");
+      password2.addClass("form-input-success");
+    }
+  });
 });
