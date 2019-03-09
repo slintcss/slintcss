@@ -45,45 +45,50 @@ $(document).ready(function() {
   carouselFunction(); // call the main function
 
   // Form validation
+  // firstname and lastname regex
+  const firstnameAndLastnameRegex = /^[a-zA-Z ]{2,15}$/;
+  const invalidInput = "invalid-input";
+  const formInputSuccess = "form-input-success"
+  const formInputError = "form-input-error"
+
   $("#fullname").keyup(function() {
     const fullnameRegex = /^[a-zA-Z ]{5,25}$/;
     const fullName = $("#fullname");
     if (!fullnameRegex.test(fullName.val())) {
-      fullName.addClass("invalid-input");
-      fullName.removeClass("form-input-success");
-      fullName.addClass("form-input-error");
+      fullName.addClass(invalidInput);
+      fullName.removeClass(formInputSuccess);
+      fullName.addClass(formInputError);
     } else {
-      fullName.removeClass("invalid-input");
-      fullName.removeClass("form-input-error");
-      fullName.addClass("form-input-success");
+      fullName.removeClass(invalidInput);
+      fullName.removeClass(formInputError);
+      fullName.addClass(formInputSuccess);
     }
   });
 
   $("#firstname").keyup(function () {
-    const firstnameRegex = /^[a-zA-Z ]{2,15}$/;
     const firstname = $("#firstname");
-    if (!firstnameRegex.test(firstname.val())) {
-      firstname.addClass("invalid-input");
-      firstname.removeClass("form-input-success");
-      firstname.addClass("form-input-error");
+    if (!firstnameAndLastnameRegex.test(firstname.val())) {
+      firstname.addClass(invalidInput);
+      firstname.removeClass(formInputSuccess);
+      firstname.addClass(formInputError);
     } else {
-      firstname.removeClass("invalid-input");
-      firstname.removeClass("form-input-error");
-      firstname.addClass("form-input-success");
+      firstname.removeClass(invalidInput);
+      firstname.removeClass(formInputError);
+      firstname.addClass(formInputSuccess);
     }
   });
 
   $("#lastname").keyup(function () {
     const lastnameRegex = /^[a-zA-Z ]{2,15}$/;
     const lastname = $("#lastname");
-    if (!lastnameRegex.test(lastname.val())) {
-      lastname.addClass("invalid-input");
-      lastname.removeClass("form-input-success");
-      lastname.addClass("form-input-error");
+    if (!firstnameAndLastnameRegex.test(lastname.val())) {
+      lastname.addClass(invalidInput);
+      lastname.removeClass(formInputSuccess);
+      lastname.addClass(formInputError);
     } else {
-      lastname.removeClass("invalid-input");
-      lastname.removeClass("form-input-error");
-      lastname.addClass("form-input-success");
+      lastname.removeClass(invalidInput);
+      lastname.removeClass(formInputError);
+      lastname.addClass(formInputSuccess);
     }
   });
 
@@ -91,13 +96,13 @@ $(document).ready(function() {
     const emailRegex = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,10})$/;
     const email = $("#email");
     if (!emailRegex.test(email.val())) {
-      email.addClass("invalid-input");
-      email.removeClass("form-input-success");
-      email.addClass("form-input-error");
+      email.addClass(invalidInput);
+      email.removeClass(formInputSuccess);
+      email.addClass(formInputError);
     } else {
-      email.removeClass("invalid-input");
-      email.removeClass("form-input-error");
-      email.addClass("form-input-success");
+      email.removeClass(invalidInput);
+      email.removeClass(formInputError);
+      email.addClass(formInputSuccess);
     }
   });
 
@@ -105,26 +110,26 @@ $(document).ready(function() {
     const password = $("#password");
     const passwordRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
     if (!passwordRegex.test(password.val())) {
-      password.addClass("invalid-input");
-      password.removeClass("form-input-success");
-      password.addClass("form-input-error");
+      password.addClass(invalidInput);
+      password.removeClass(formInputSuccess);
+      password.addClass(formInputError);
     } else {
-      password.removeClass("invalid-input");
-      password.removeClass("form-input-error");
-      password.addClass("form-input-success");
+      password.removeClass(invalidInput);
+      password.removeClass(formInputError);
+      password.addClass(formInputSuccess);
     }
   });
 
   $("#password2").keyup(function () {
     const password2 = $("#password2");
     if ($("#password").val() !== $("#password2").val()) {
-      password2.addClass("invalid-input");
-      password2.removeClass("form-input-success");
-      password2.addClass("form-input-error");
+      password2.addClass(invalidInput);
+      password2.removeClass(formInputSuccess);
+      password2.addClass(formInputError);
     } else {
-      password2.removeClass("invalid-input");
-      password2.removeClass("form-input-error");
-      password2.addClass("form-input-success");
+      password2.removeClass(invalidInput);
+      password2.removeClass(formInputError);
+      password2.addClass(formInputSuccess);
     }
   });
 });
