@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Slintcss</title>
     <link rel="stylesheet" href="./css/slintcss.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/all.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -83,16 +85,73 @@
     </div>
 
     <div class="container">
+      <form action="" class="form">
+        <div class="form-group">
+          <label for="fullname" class="form-label">Name</label>
+          <input type="text" id="fullname" class="form-input" placeholder="Name">
+          <div class="feedback-message">Full name cannot be less than 5</div>
+        </div>
+        <div class="form-group">
+          <label for="firstname" class="form-label">FirstName</label>
+          <input type="text" id="firstname" class="form-input" placeholder="FirstName">
+          <div class="feedback-message">Firstname cannot be less than 2</div>
+        </div>
+        <div class="form-group">
+          <label for="lastname" class="form-label">LastName</label>
+          <input type="text" id="lastname" class="form-input" placeholder="LastName">
+          <div class="feedback-message">Lastname cannot be less than 2</div>
+        </div>
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input type="text" id="email" class="form-input" placeholder="Email">
+          <div class="feedback-message">Invalid email</div>
+        </div>
+        <div class="form-group">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" id="password" class="form-input" placeholder="Password">
+          <div class="feedback-message">Password must at least have 1 alphabet, lowercase, uppercase, number and cannot be less than 8</div>
+        </div>
+        <div class="form-group">
+          <label for="password2" class="form-label">Retype Password</label>
+          <input type="password" id="password2" class="form-input" placeholder="Retype Password">
+          <div class="feedback-message">Passwords don't match</div>
+        </div>
+
+        <!-- <div class="form-group">
+          <div class="form-radio-group">
+            <input type="radio" id="radio" name="radio" class="form-radio-input">
+            <label for="radio" class="form-radio-label"> <span class="form-radio-button"></span> Radio</label>
+          </div>
+          <div class="form-radio-group">
+            <input type="radio" id="radio2" name="radio" class="form-radio-input">
+            <label for="radio2" class="form-radio-label"> <span class="form-radio-button"></span> Radio 2</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="form-checkbox-group">
+            <input type="checkbox" id="check" name="checkbox" class="form-checkbox-input">
+            <label for="check" class="form-checkbox-label"> <span class="form-checkbox-button"></span> Checkbox</label>
+          </div>
+          <div class="form-checkbox-group">
+            <input type="checkbox" id="checked" name="checkbox" class="form-checkbox-input">
+            <label for="checked" class="form-checkbox-label"> <span class="form-checkbox-button"></span> Checkbox 2</label>
+          </div>
+        </div> -->
+      </form>
+    </div>
+
+    <!-- <div class="container">
       <button class="btn" type="submit">Button 1</button>
       <button class="btn btn-block" type="submit">Button 2</button>
       <button class="btn btn-outline" type="submit">Button 3</button>
       <input class="btn from-up" type="submit" value="Submit 1" />
       <input class="btn btn-block from-right" type="submit" value="Submit 2" />
-<input class="btn btn-outline bounce-from-right" type="submit" value="Submit 3" />
+      <input class="btn btn-outline bounce-from-right" type="submit" value="Submit 3" />
       <a class="btn from-down" href="#">Link 1</a>
       <a class="btn btn-block from-left" href="#">Link 2</a>
-<a class="btn btn-outline bounce-from-left" href="#">Link 3</a>
-    </div>
+      <a class="btn btn-outline bounce-from-left" href="#">Link 3</a>
+    </div> -->
 
     <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti incidunt illo hic omnis aliquid cupiditate
     impedit expedita placeat commodi quasi cumque, asperiores deleniti ducimus eos ab provident est? Consectetur animi,
