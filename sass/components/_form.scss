@@ -44,10 +44,10 @@
         font-size: .8rem;
         font-style: italic;
         display: none;
+    }
 
-        &-error {
-            display: block;
-        }
+    .invalid-input + .feedback-message {
+        display: block;
     }
 
     &-label {

@@ -325,8 +325,9 @@ p,
   font-size: .8rem;
   font-style: italic;
   display: none; }
-  .form .feedback-message-error {
-    display: block; }
+
+.form .invalid-input + .feedback-message {
+  display: block; }
 
 .form-label {
   color: #999;

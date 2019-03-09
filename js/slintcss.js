@@ -49,11 +49,11 @@ $(document).ready(function() {
     const fullnameRegex = /^[a-zA-Z ]{5,25}$/;
     const fullName = $("#fullname");
     if (!fullnameRegex.test(fullName.val())) {
-      $(".feedback-message").addClass("feedback-message-error");
+      fullName.addClass("invalid-input");
       fullName.removeClass("form-input-success");
       fullName.addClass("form-input-error");
     } else {
-      $(".feedback-message").removeClass("feedback-message-error");
+      fullName.removeClass("invalid-input");
       fullName.removeClass("form-input-error");
       fullName.addClass("form-input-success");
     }
@@ -63,11 +63,11 @@ $(document).ready(function() {
     const firstnameRegex = /^[a-zA-Z ]{2,15}$/;
     const firstname = $("#firstname");
     if (!firstnameRegex.test(firstname.val())) {
-      $(".feedback-message").addClass("feedback-message-error");
+      firstname.addClass("invalid-input");
       firstname.removeClass("form-input-success");
       firstname.addClass("form-input-error");
     } else {
-      $(".feedback-message").removeClass("feedback-message-error");
+      firstname.removeClass("invalid-input");
       firstname.removeClass("form-input-error");
       firstname.addClass("form-input-success");
     }
@@ -77,11 +77,11 @@ $(document).ready(function() {
     const lastnameRegex = /^[a-zA-Z ]{2,15}$/;
     const lastname = $("#lastname");
     if (!lastnameRegex.test(lastname.val())) {
-      $(".feedback-message").addClass("feedback-message-error");
+      lastname.addClass("invalid-input");
       lastname.removeClass("form-input-success");
       lastname.addClass("form-input-error");
     } else {
-      $(".feedback-message").removeClass("feedback-message-error");
+      lastname.removeClass("invalid-input");
       lastname.removeClass("form-input-error");
       lastname.addClass("form-input-success");
     }
@@ -91,11 +91,11 @@ $(document).ready(function() {
     const emailRegex = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,10})$/;
     const email = $("#email");
     if (!emailRegex.test(email.val())) {
-      $(".feedback-message").addClass("feedback-message-error");
+      email.addClass("invalid-input");
       email.removeClass("form-input-success");
       email.addClass("form-input-error");
     } else {
-      $(".feedback-message").removeClass("feedback-message-error");
+      email.removeClass("invalid-input");
       email.removeClass("form-input-error");
       email.addClass("form-input-success");
     }
@@ -105,11 +105,11 @@ $(document).ready(function() {
     const password = $("#password");
     const passwordRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
     if (!passwordRegex.test(password.val())) {
-      $(".feedback-message").addClass("feedback-message-error");
+      password.addClass("invalid-input");
       password.removeClass("form-input-success");
       password.addClass("form-input-error");
     } else {
-      $(".feedback-message").removeClass("feedback-message-error");
+      password.removeClass("invalid-input");
       password.removeClass("form-input-error");
       password.addClass("form-input-success");
     }
@@ -118,11 +118,11 @@ $(document).ready(function() {
   $("#password2").keyup(function () {
     const password2 = $("#password2");
     if ($("#password").val() !== $("#password2").val()) {
-      $(".feedback-message").addClass("feedback-message-error");
+      password2.addClass("invalid-input");
       password2.removeClass("form-input-success");
       password2.addClass("form-input-error");
     } else {
-      $(".feedback-message").removeClass("feedback-message-error");
+      password2.removeClass("invalid-input");
       password2.removeClass("form-input-error");
       password2.addClass("form-input-success");
     }
