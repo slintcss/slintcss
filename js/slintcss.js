@@ -46,79 +46,31 @@ $(document).ready(function() {
 
   // Form validation
   // firstname and lastname regex
+  const fullnameRegex = /^[a-zA-Z ]{5,25}$/;
   const firstnameAndLastnameRegex = /^[a-zA-Z ]{2,15}$/;
-  const invalidInput = "invalid-input";
-  const formInputSuccess = "form-input-success"
-  const formInputError = "form-input-error"
+  const emailRegex = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,10})$/;
+  const passwordRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
+  const [fullName, firstName, lastName, email, password, invalidInput, formInputSuccess, formInputError] = [$("#fullname"), $("#firstname"), $("#lastname"), $("#email"), $("#password"), "invalid-input", "form-input-success", "form-input-error"];
 
-  $("#fullname").keyup(function() {
-    const fullnameRegex = /^[a-zA-Z ]{5,25}$/;
-    const fullName = $("#fullname");
-    if (!fullnameRegex.test(fullName.val())) {
-      fullName.addClass(invalidInput);
-      fullName.removeClass(formInputSuccess);
-      fullName.addClass(formInputError);
-    } else {
-      fullName.removeClass(invalidInput);
-      fullName.removeClass(formInputError);
-      fullName.addClass(formInputSuccess);
-    }
-  });
+  const formValidation = (inputName, regex) => {
+    inputName.keyup(function () {
+      if (!regex.test(inputName.val())) {
+        inputName.addClass(invalidInput);
+        inputName.removeClass(formInputSuccess);
+        inputName.addClass(formInputError);
+      } else {
+        inputName.removeClass(invalidInput);
+        inputName.removeClass(formInputError);
+        inputName.addClass(formInputSuccess);
+      }
+    });
+  }
 
-  $("#firstname").keyup(function () {
-    const firstname = $("#firstname");
-    if (!firstnameAndLastnameRegex.test(firstname.val())) {
-      firstname.addClass(invalidInput);
-      firstname.removeClass(formInputSuccess);
-      firstname.addClass(formInputError);
-    } else {
-      firstname.removeClass(invalidInput);
-      firstname.removeClass(formInputError);
-      firstname.addClass(formInputSuccess);
-    }
-  });
-
-  $("#lastname").keyup(function () {
-    const lastnameRegex = /^[a-zA-Z ]{2,15}$/;
-    const lastname = $("#lastname");
-    if (!firstnameAndLastnameRegex.test(lastname.val())) {
-      lastname.addClass(invalidInput);
-      lastname.removeClass(formInputSuccess);
-      lastname.addClass(formInputError);
-    } else {
-      lastname.removeClass(invalidInput);
-      lastname.removeClass(formInputError);
-      lastname.addClass(formInputSuccess);
-    }
-  });
-
-  $("#email").keyup(function() {
-    const emailRegex = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,10})$/;
-    const email = $("#email");
-    if (!emailRegex.test(email.val())) {
-      email.addClass(invalidInput);
-      email.removeClass(formInputSuccess);
-      email.addClass(formInputError);
-    } else {
-      email.removeClass(invalidInput);
-      email.removeClass(formInputError);
-      email.addClass(formInputSuccess);
-    }
-  });
-
-  $("#password").keyup(function() {
-    const password = $("#password");
-    const passwordRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
-    if (!passwordRegex.test(password.val())) {
-      password.addClass(invalidInput);
-      password.removeClass(formInputSuccess);
-      password.addClass(formInputError);
-    } else {
-      password.removeClass(invalidInput);
-      password.removeClass(formInputError);
-      password.addClass(formInputSuccess);
-    }
-  });
+  formValidation(fullName, fullnameRegex);
+  formValidation(firstName, firstnameAndLastnameRegex);
+  formValidation(lastName, firstnameAndLastnameRegex);
+  formValidation(email, emailRegex);
+  formValidation(password, passwordRegex);
 
   $("#password2").keyup(function () {
     const password2 = $("#password2");
