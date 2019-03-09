@@ -132,4 +132,20 @@ $(document).ready(function() {
       password2.addClass(formInputSuccess);
     }
   });
+
+  // Modal Function
+  $("#modal").click(function() {
+    $(".modal").css("display", "block");
+  });
+
+  $(".modal-close").click(function () {
+    $(".modal").css("display", "none");
+  });
+
+  $(window).click(function(e) {
+    const modal = document.querySelector("#s-model");
+    if (e.target === modal) {
+      $(".modal").css("display", "none");
+    }
+  });
 });
