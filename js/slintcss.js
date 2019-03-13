@@ -100,4 +100,17 @@ $(document).ready(function() {
       $(".modal").css("display", "none");
     }
   });
+
+  // Sidebar Toggle 
+  window.addEventListener("resize", function () {
+    if (window.matchMedia("(min-width: 900px)").matches) {
+      $(".sidebar").removeClass("sidebar-hide");
+    } else {
+      $(".sidebar").addClass("sidebar-hide");
+    }
+  });
+  
+  $("#toggle-sidebar").click(function() {
+    $(".sidebar").toggleClass("sidebar-hide");
+  });
 });

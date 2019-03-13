@@ -1,0 +1,67 @@
+.flex {
+    display: flex;
+
+    &-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &-down {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+
+    &-down {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // Flex Basis
+    &-width {
+        &-20 {
+            flex: 0 0 20%
+        }
+        &-30 {
+            flex: 0 0 30%
+        }
+        &-40 {
+            flex: 0 0 40%
+        }
+        &-50 {
+            flex: 0 0 50%
+        }
+        &-60 {
+            flex: 0 0 60%
+        }
+        &-70 {
+            flex: 0 0 70%
+        }
+        &-80 {
+            flex: 0 0 80%
+        }
+    }
+
+    // Flex Grow
+    &-grow {
+        flex: 1;
+    }
+
+    &-right {
+        margin-right: auto;
+        display: flex;
+    }
+
+    &-space-between {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-stretch {
+        display: flex;
+        align-items: center;
+        align-self: stretch;
+    }
+}
