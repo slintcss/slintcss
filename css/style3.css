@@ -2,22 +2,6 @@
     background-color: #fff;
 }
 
-.sidebar-logo {
-    border-bottom: 1px solid #f7f5f5;
-}
-
-.sidebar-content {
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 3px;
-}
-
-
-.sidebar-legal {
-    border-top: 1px solid #f7f5f5;
-    padding: 10px;
-}
-
 .main-content {
     background-color: #fff;
 }

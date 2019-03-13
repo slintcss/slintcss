@@ -776,7 +776,12 @@ p,
   .sidebar-hide {
     margin-left: -13rem; }
   .sidebar-logo {
-    padding: .6rem; }
+    padding: .6rem;
+    border-bottom: 1px solid #f7f5f5; }
+  .sidebar-content {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 3px; }
   .sidebar-photo {
     border-radius: 50%; }
   .sidebar-menu {
@@ -829,6 +834,23 @@ p,
     .header {
       padding: 1rem; } }
 
+.toggle-sidebar {
+  background-color: transparent;
+  border: none;
+  margin: 0 15px; }
+  .toggle-sidebar:focus {
+    outline: none; }
+  .toggle-sidebar:active {
+    transform: translateY(2px); }
+  .toggle-sidebar-button {
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: #6d6b6b;
+    cursor: pointer; }
+  @media (max-width: 37.5em) {
+    .toggle-sidebar {
+      margin: 0 5px; } }
+
 .search-input {
   font-family: inherit;
   font-size: inherit;
@@ -840,12 +862,10 @@ p,
   width: 50%;
   height: 2.5rem;
   transition: all .9s;
-  margin-right: -2.5rem;
-  transition: padding 1s, margin-right .2s; }
+  margin-right: -2.5rem; }
   .search-input:focus {
     outline: none;
-    width: 100%;
-    background-color: #f3f7f7; }
+    width: 100%; }
   @media (max-width: 37.5em) {
     .search-input {
       margin-right: 0;
@@ -873,9 +893,12 @@ p,
   height: 100%;
   display: flex;
   align-items: center; }
+  @media (max-width: 37.5em) {
+    .user-nav > * {
+      padding: 0 .3rem; } }
 
 .user-nav > *:hover {
-  background-color: #999; }
+  background-color: #f3f7f7; }
 
 .user-nav-icon-box {
   position: relative; }
@@ -908,6 +931,13 @@ p,
   height: 2.5rem;
   border-radius: 50%;
   margin-right: .5rem; }
+  @media (max-width: 37.5em) {
+    .user-nav-user-photo {
+      height: 1.5rem; } }
+
+@media (max-width: 37.5em) {
+  .user-nav-username {
+    display: none; } }
 
 .main-body {
   flex: 1;

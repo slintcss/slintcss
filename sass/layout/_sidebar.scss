@@ -10,6 +10,13 @@
 
     &-logo {
         padding: .6rem;
+        border-bottom: 1px solid $color-grey-light-2;
+    }
+
+    &-content {
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 3px;
     }
 
     &-photo {
@@ -90,6 +97,31 @@
     }
 }
 
+.toggle-sidebar {
+    background-color: transparent;
+    border: none;
+    margin: 0 15px;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:active {
+        transform: translateY(2px);
+    }
+
+    &-button {
+        height: 1.5rem;
+        width: 1.5rem;
+        fill: $color-grey-3;
+        cursor: pointer;
+    }
+
+    @include respond(phone) {
+        margin: 0 5px;
+    }
+}
+
 .search {
 
     &-input {
@@ -104,12 +136,10 @@
         height: 2.5rem;
         transition: all .9s;
         margin-right: -2.5rem;
-        transition: padding 1s, margin-right .2s;
 
         &:focus {
             outline: none;
             width: 100%;
-            background-color: $color-grey-light;
         }
 
         @include respond(phone) {
@@ -150,10 +180,14 @@
         height: 100%;
         display: flex;
         align-items: center;
+
+        @include respond(phone) {
+            padding: 0 .3rem;
+        }
     }
 
     &>*:hover {
-        background-color: $color-grey-2;
+        background-color: $color-grey-light;
     }
 
     &-icon-box {
@@ -192,6 +226,16 @@
         height: 2.5rem;
         border-radius: 50%;
         margin-right: .5rem;
+
+        @include respond(phone) {
+            height: 1.5rem;
+        }
+    }
+
+    &-username {
+        @include respond(phone) {
+            display: none;
+        }
     }
 }
 
