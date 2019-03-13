@@ -8,7 +8,23 @@
 
 .container-full {
   width: 100%;
-  padding: 0 .4rem;
+  min-height: 100vh;
+}
+
+.left-gutter {
+  margin-left: 20px;
+
+  @include respond(phone) {
+    margin-left: 0;
+  }
+}
+
+.right-gutter {
+  margin-right: 20px;
+
+  @include respond(phone) {
+    margin-right: 0;
+  }
 }
 
 .container {
