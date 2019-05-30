@@ -1,7 +1,7 @@
 {
   "name": "slintcss",
   "version": "1.0.0",
-  "description": "A frontend framework for faster development",
+  "description": "A css framework for faster development",
   "main": "app.js",
   "scripts": {
     "compile:sass": "node-sass ./sass/main.scss ./css/slintcss.css -w",
