@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/slintcss/slintcss#readme",
   "devDependencies": {
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.13.0"
   }
 }
