@@ -1,67 +1,15 @@
-.f-left {
-  float: left;
-}
-
-.f-right {
-  float: right;
-}
-
 .container-full {
   width: 100%;
-  min-height: 100vh;
-}
-
-.left-gutter {
-  margin-left: 20px;
-
-  @include respond(phone) {
-    margin-left: 0;
-  }
-}
-
-.right-gutter {
-  margin-right: 20px;
-
-  @include respond(phone) {
-    margin-right: 0;
-  }
+  min-height: 100%;
 }
 
 .container {
   margin: 0 auto;
   width: 70%;
-  transition: all .8s;
+  transition: width 0.8s;
 
-  @include respond(tab-port) {
+  @include responsive(tab-port) {
     width: 100%;
     padding: 0 5px;
   }
-}
-
-.appbar-blue {
-  background-color: $color-blue-2;
-}
-
-.from-left {
-  animation: fromLeft 1s ease-in-out;
-}
-
-.from-right {
-  animation: fromRight 1s ease-in-out;
-}
-
-.from-up {
-  animation: fromUp 1s ease-in-out;
-}
-
-.from-down {
-  animation: fromDown 1s ease-in-out;
-}
-
-.bounce-from-left {
-  animation: bounceFromLeft 1.2s ease;
-}
-
-.bounce-from-right {
-  animation: bounceFromRight 1.2s ease;
 }

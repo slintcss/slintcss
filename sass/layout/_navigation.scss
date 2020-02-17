@@ -1,287 +1,310 @@
-// Appbar Navigation Responsive
-.appbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 8vh;
-  width: 100vw;
-  background: inherit;
-  padding: 0 15%;
-  position: relative;
-  z-index: 5000;
-  transition: all 0.8s;
+// // Appbar Navigation Responsive
+// .appbar {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   min-height: 8vh;
+//   width: 100vw;
+//   background: inherit;
+//   padding: 0 15%;
+//   position: relative;
+//   z-index: 5000;
+//   transition: all 0.8s;
 
-  @include respond(tab-port) {
-    padding: 0;
-  }
+//   @include respond(tab-port) {
+//     padding: 0;
+//   }
 
-  &-logo {
-    color: inherit;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 20px;
-    display: inline-block;
-  }
+//   &-logo {
+//     color: inherit;
+//     text-transform: uppercase;
+//     letter-spacing: 5px;
+//     font-size: 20px;
+//     display: inline-block;
+//   }
 
-  &-list {
-    display: flex;
-    justify-content: space-around;
-    width: 45%;
-    transition: all 0.8s;
-  }
+//   &-list {
+//     display: flex;
+//     justify-content: space-around;
+//     width: 45%;
+//     transition: all 0.8s;
+//   }
 
-  &-item {
-    list-style: none;
-  }
+//   &-item {
+//     list-style: none;
+//   }
 
-  &-link {
-    color: inherit;
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-weight: bold;
-    font-size: 14px;
-  }
+//   &-link {
+//     color: inherit;
+//     text-decoration: none;
+//     letter-spacing: 3px;
+//     font-weight: bold;
+//     font-size: 14px;
+//   }
 
-  &-burger {
-    display: none;
-    padding: 0 1rem;
-    transform: translateX(50rem);
-    transition: all 0.8s;
+//   &-burger {
+//     display: none;
+//     padding: 0 1rem;
+//     transform: translateX(50rem);
+//     transition: all 0.8s;
 
-    div {
-      width: 25px;
-      height: 3px;
-      margin: 5px;
-      background-color: #e7e5e5;
-      transition: all 0.5s;
-    }
-  }
+//     div {
+//       width: 25px;
+//       height: 3px;
+//       margin: 5px;
+//       background-color: #e7e5e5;
+//       transition: all 0.5s;
+//     }
+//   }
 
-  // Tab Screen
-  &-md {
-    @include respond(tab-port) {
-      .appbar {
-        &-list {
-          position: absolute;
-          right: 0;
-          height: 92vh;
-          top: 8vh;
-          background: inherit;
-          display: block;
-          text-align: center;
-          padding-top: 1.5rem;
-          margin-right: -0.5rem;
-          font-size: 2rem;
-          width: 50%;
-          transform: translateX(100%);
-          transition: all 0.5s ease-in;
-        }
+//   // Tab Screen
+//   &-md {
+//     @include respond(tab-port) {
+//       .appbar {
+//         &-list {
+//           position: absolute;
+//           right: 0;
+//           height: 92vh;
+//           top: 8vh;
+//           background: inherit;
+//           display: block;
+//           text-align: center;
+//           padding-top: 1.5rem;
+//           margin-right: -0.5rem;
+//           font-size: 2rem;
+//           width: 50%;
+//           transform: translateX(100%);
+//           transition: all 0.5s ease-in;
+//         }
 
-        &-item {
-          opacity: 0;
-        }
+//         &-item {
+//           opacity: 0;
+//         }
 
-        &-burger {
-          transform: translateX(0);
-          display: block;
-        }
+//         &-burger {
+//           transform: translateX(0);
+//           display: block;
+//         }
 
-        &-list-active {
-          transform: translateX(0);
-        }
-      }
-    }
-  }
+//         &-list-active {
+//           transform: translateX(0);
+//         }
+//       }
+//     }
+//   }
 
-  // Mobile Phone Screen
-  &-sm {
-    @include respond(phone) {
-      .appbar {
-        &-list {
-          position: absolute;
-          right: 0;
-          height: 92vh;
-          top: 8vh;
-          margin-right: -0.5rem;
-          background: inherit;
-          display: block;
-          text-align: center;
-          padding-top: 1.5rem;
-          font-size: 2rem;
-          width: 50%;
-          transform: translateX(100%);
-          transition: all 0.5s ease-in;
-        }
+//   // Mobile Phone Screen
+//   &-sm {
+//     @include respond(phone) {
+//       .appbar {
+//         &-list {
+//           position: absolute;
+//           right: 0;
+//           height: 92vh;
+//           top: 8vh;
+//           margin-right: -0.5rem;
+//           background: inherit;
+//           display: block;
+//           text-align: center;
+//           padding-top: 1.5rem;
+//           font-size: 2rem;
+//           width: 50%;
+//           transform: translateX(100%);
+//           transition: all 0.5s ease-in;
+//         }
 
-        &-item {
-          opacity: 0;
-        }
+//         &-item {
+//           opacity: 0;
+//         }
 
-        &-burger {
-          transform: translateX(0);
-          display: block;
-        }
+//         &-burger {
+//           transform: translateX(0);
+//           display: block;
+//         }
 
-        &-list-active {
-          transform: translateX(0);
-        }
-      }
-    }
-  }
+//         &-list-active {
+//           transform: translateX(0);
+//         }
+//       }
+//     }
+//   }
 
-  &-fixed {
-    position: fixed;
-  }
+//   &-fixed {
+//     position: fixed;
+//   }
 
-  &-toggle .appbar-burger-line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-  }
+//   &-toggle .appbar-burger-line1 {
+//     transform: rotate(-45deg) translate(-5px, 6px);
+//   }
 
-  &-toggle .appbar-burger-line2 {
-    opacity: 0;
-  }
+//   &-toggle .appbar-burger-line2 {
+//     opacity: 0;
+//   }
 
-  &-toggle .appbar-burger-line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-  }
-}
+//   &-toggle .appbar-burger-line3 {
+//     transform: rotate(45deg) translate(-5px, -6px);
+//   }
+// }
 
-// BottomAppbar Navigation Responsive
-.bottomappbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 8vh;
-  width: 100vw;
-  transition: all 0.8s;
+// // BottomAppbar Navigation Responsive
+// .bottomappbar {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   min-height: 8vh;
+//   width: 100vw;
+//   transition: all 0.8s;
 
-  @include respond(tab-port) {
-    justify-content: space-around;
-  }
+//   @include respond(tab-port) {
+//     justify-content: space-around;
+//   }
 
-  &-logo {
-    color: inherit;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 20px;
-    padding-left: 1.3rem;
-    display: inline-block;
-  }
+//   &-logo {
+//     color: inherit;
+//     text-transform: uppercase;
+//     letter-spacing: 5px;
+//     font-size: 20px;
+//     padding-left: 1.3rem;
+//     display: inline-block;
+//   }
 
-  &-list {
-    display: flex;
-    justify-content: space-around;
-    width: 45%;
-    transition: all 1s;
-  }
+//   &-list {
+//     display: flex;
+//     justify-content: space-around;
+//     width: 45%;
+//     transition: all 1s;
+//   }
 
-  &-item {
-    list-style: none;
-  }
+//   &-item {
+//     list-style: none;
+//   }
 
-  &-link {
-    color: inherit;
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-weight: bold;
-    font-size: 14px;
-  }
+//   &-link {
+//     color: inherit;
+//     text-decoration: none;
+//     letter-spacing: 3px;
+//     font-weight: bold;
+//     font-size: 14px;
+//   }
 
-  &-icon,
-  &-icon::before {
-    display: none;
-  }
+//   &-icon,
+//   &-icon::before {
+//     display: none;
+//   }
 
-  &-bars,
-  &-bars::before {
-    display: none;
-  }
+//   &-bars,
+//   &-bars::before {
+//     display: none;
+//   }
 
-  &-md {
-    @include respond(tab-port) {
-      .bottomappbar {
-        &-list {
-          position: fixed;
-          bottom: 0;
-          right: 0;
-          background: inherit;
-          width: 100vw;
-          margin-right: -100rem;
-        }
+//   &-md {
+//     @include respond(tab-port) {
+//       .bottomappbar {
+//         &-list {
+//           position: fixed;
+//           bottom: 0;
+//           right: 0;
+//           background: inherit;
+//           width: 100vw;
+//           margin-right: -100rem;
+//         }
 
-        &-item {
-          padding: 0.5rem 0;
+//         &-item {
+//           padding: 0.5rem 0;
 
-          &:hover {
-            background: inherit;
-          }
-        }
+//           &:hover {
+//             background: inherit;
+//           }
+//         }
 
-        &-icon,
-        &-icon::before {
-          display: block;
-          text-align: center;
-        }
+//         &-icon,
+//         &-icon::before {
+//           display: block;
+//           text-align: center;
+//         }
 
-        &-bars,
-        &-bars::before {
-          display: block;
-          position: fixed;
-          right: 0;
-          bottom: 0;
-          margin: 0 0.6rem 0.6rem 0;
-          background: #d3d3d3;
-          font-size: 1.8rem;
-          padding: 0.7rem;
-          cursor: pointer;
-        }
-      }
-    }
-  }
+//         &-bars,
+//         &-bars::before {
+//           display: block;
+//           position: fixed;
+//           right: 0;
+//           bottom: 0;
+//           margin: 0 0.6rem 0.6rem 0;
+//           background: #d3d3d3;
+//           font-size: 1.8rem;
+//           padding: 0.7rem;
+//           cursor: pointer;
+//         }
+//       }
+//     }
+//   }
 
-  &-sm {
-    @include respond(phone) {
-      .bottomappbar {
-        &-list {
-          position: fixed;
-          bottom: 0;
-          right: 0;
-          background: inherit;
-          width: 100vw;
-          margin-right: -100rem;
-        }
+//   &-sm {
+//     @include respond(phone) {
+//       .bottomappbar {
+//         &-list {
+//           position: fixed;
+//           bottom: 0;
+//           right: 0;
+//           background: inherit;
+//           width: 100vw;
+//           margin-right: -100rem;
+//         }
 
-        &-item {
-          padding: 0.5rem 0;
+//         &-item {
+//           padding: 0.5rem 0;
 
-          &:hover {
-            background: inherit;
-          }
-        }
+//           &:hover {
+//             background: inherit;
+//           }
+//         }
 
-        &-icon,
-        &-icon::before {
-          display: block;
-          text-align: center;
-        }
+//         &-icon,
+//         &-icon::before {
+//           display: block;
+//           text-align: center;
+//         }
 
-        &-bars,
-        &-bars::before {
-          display: block;
-          position: fixed;
-          right: 0;
-          bottom: 0;
-          margin: 0 0.4rem 0.4rem 0;
-          background: #d3d3d3;
-          font-size: 1.8rem;
-          padding: 0.7rem;
-          cursor: pointer;
-        }
-      }
-    }
-  }
+//         &-bars,
+//         &-bars::before {
+//           display: block;
+//           position: fixed;
+//           right: 0;
+//           bottom: 0;
+//           margin: 0 0.4rem 0.4rem 0;
+//           background: #d3d3d3;
+//           font-size: 1.8rem;
+//           padding: 0.7rem;
+//           cursor: pointer;
+//         }
+//       }
+//     }
+//   }
 
-  &-list-active {
-    margin-right: 0 !important;
-  }
-}
+//   &-list-active {
+//     margin-right: 0 !important;
+//   }
+// }
+
+// .appbar {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   height: 50px;
+//   max-height: 50px;
+//   width: 100%;
+//   background: inherit;
+//   padding: 0 10%;
+//   position: relative;
+//   z-index: 5000;
+//   transition: all 0.8s;
+//   background-color: red;
+
+//   @include responsive(tab-port) {
+//     padding: 0 5%;
+//   }
+
+//   &-logo {
+//     @include linkStyle;
+//   }
+// }

@@ -1,256 +1,256 @@
-// Sidebar
-.sidebar {
-    flex: 0 0 13rem;
-    border-right: 1px solid $color-grey-light-2;
-    transition: margin-left .3s;
+// // Sidebar
+// .sidebar {
+//     flex: 0 0 13rem;
+//     border-right: 1px solid $color-grey-light-2;
+//     transition: margin-left .3s;
 
-    &-hide {
-        margin-left: -13rem;
-    }
+//     &-hide {
+//         margin-left: -13rem;
+//     }
 
-    &-logo {
-        padding: .6rem;
-        border-bottom: 1px solid $color-grey-light-2;
-    }
+//     &-logo {
+//         padding: .6rem;
+//         border-bottom: 1px solid $color-grey-light-2;
+//     }
 
-    &-content {
-        font-size: 20px;
-        font-weight: 700;
-        letter-spacing: 3px;
-    }
+//     &-content {
+//         font-size: 20px;
+//         font-weight: 700;
+//         letter-spacing: 3px;
+//     }
 
-    &-photo {
-        border-radius: 50%;
-    }
+//     &-photo {
+//         border-radius: 50%;
+//     }
 
-    &-menu {
-        font-size: 1.2rem;
-        margin-top: 1rem;
-        margin-bottom: auto;
-    }
+//     &-menu {
+//         font-size: 1.2rem;
+//         margin-top: 1rem;
+//         margin-bottom: auto;
+//     }
 
-    &-list {
-        list-style: none;
-        width: 100%;
-    }
+//     &-list {
+//         list-style: none;
+//         width: 100%;
+//     }
 
-    &-item {
-        position: relative;
-        width: 100%;
-        color: $color-blue;
-    }
+//     &-item {
+//         position: relative;
+//         width: 100%;
+//         color: $color-blue;
+//     }
 
-    &-item::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 3px;
-        background-color: $color-blue;
-        transform: scaleY(0);
-        transition: transform .2s, width .4s cubic-bezier(1, 0, 0, 1) .2s, background-color .1s;
-    }
+//     &-item::before {
+//         content: "";
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         height: 100%;
+//         width: 3px;
+//         background-color: $color-blue;
+//         transform: scaleY(0);
+//         transition: transform .2s, width .4s cubic-bezier(1, 0, 0, 1) .2s, background-color .1s;
+//     }
 
-    &-item:hover::before,
-    &-item-active::before {
-        transform: scaleY(1);
-        width: 100%;
-    }
+//     &-item:hover::before,
+//     &-item-active::before {
+//         transform: scaleY(1);
+//         width: 100%;
+//     }
 
-    &-item:active::before,
-    &-item-active::before {
-        background-color: $color-blue-2;
-    }
+//     &-item:active::before,
+//     &-item-active::before {
+//         background-color: $color-blue-2;
+//     }
 
-    &-link:visited,
-    &-link:link {
-        text-decoration: none;
-        text-transform: uppercase;
-        padding: .5rem 1rem;
-        display: flex;
-        align-items: center;
-        position: relative;
-        z-index: 10;
-        transition: color .4s .2s;
-        color: currentColor;
-    }
+//     &-link:visited,
+//     &-link:link {
+//         text-decoration: none;
+//         text-transform: uppercase;
+//         padding: .5rem 1rem;
+//         display: flex;
+//         align-items: center;
+//         position: relative;
+//         z-index: 10;
+//         transition: color .4s .2s;
+//         color: currentColor;
+//     }
 
-    &-link:hover,
-    &-item-active {
-        color: $color-white;
-    }
+//     &-link:hover,
+//     &-item-active {
+//         color: $color-white;
+//     }
 
-    &-legal {
-        font-size: 1rem;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-}
+//     &-legal {
+//         font-size: 1rem;
+//         text-align: center;
+//         margin-bottom: 10px;
+//     }
+// }
 
-.header {
-    height: 3.5rem;
-    border-bottom: 1px solid $color-grey-light-2;
+// .header {
+//     height: 3.5rem;
+//     border-bottom: 1px solid $color-grey-light-2;
 
-    @include respond(phone) {
-        padding: 1rem;
-    }
-}
+//     @include respond(phone) {
+//         padding: 1rem;
+//     }
+// }
 
-.toggle-sidebar {
-    background-color: transparent;
-    border: none;
-    margin: 0 15px;
+// .toggle-sidebar {
+//     background-color: transparent;
+//     border: none;
+//     margin: 0 15px;
 
-    &:focus {
-        outline: none;
-    }
+//     &:focus {
+//         outline: none;
+//     }
 
-    &:active {
-        transform: translateY(2px);
-    }
+//     &:active {
+//         transform: translateY(2px);
+//     }
 
-    &-button {
-        height: 1.5rem;
-        width: 1.5rem;
-        fill: $color-grey-3;
-        cursor: pointer;
-    }
+//     &-button {
+//         height: 1.5rem;
+//         width: 1.5rem;
+//         fill: $color-grey-3;
+//         cursor: pointer;
+//     }
 
-    @include respond(phone) {
-        margin: 0 5px;
-    }
-}
+//     @include respond(phone) {
+//         margin: 0 5px;
+//     }
+// }
 
-.search {
+// .search {
 
-    &-input {
-        font-family: inherit;
-        font-size: inherit;
-        background-color: $color-grey-light;
-        border: none;
-        color: inherit;
-        padding: .4rem 2rem;
-        border-radius: 100px;
-        width: 50%;
-        height: 2.5rem;
-        transition: all .9s;
-        margin-right: -2.5rem;
+//     &-input {
+//         font-family: inherit;
+//         font-size: inherit;
+//         background-color: $color-grey-light;
+//         border: none;
+//         color: inherit;
+//         padding: .4rem 2rem;
+//         border-radius: 100px;
+//         width: 50%;
+//         height: 2.5rem;
+//         transition: all .9s;
+//         margin-right: -2.5rem;
 
-        &:focus {
-            outline: none;
-            width: 100%;
-        }
+//         &:focus {
+//             outline: none;
+//             width: 100%;
+//         }
 
-        @include respond(phone) {
-            margin-right: 0;
-            padding: .4rem 1rem;
-        }
-    }
+//         @include respond(phone) {
+//             margin-right: 0;
+//             padding: .4rem 1rem;
+//         }
+//     }
 
-    &-button {
-        border: none;
-        background-color: transparent;
+//     &-button {
+//         border: none;
+//         background-color: transparent;
 
-        &:focus {
-            outline: none;
-        }
+//         &:focus {
+//             outline: none;
+//         }
 
-        &:active {
-            transform: translateY(2px);
-        }
+//         &:active {
+//             transform: translateY(2px);
+//         }
 
-        @include respond(phone) {
-            visibility: hidden;
-        }
-    }
+//         @include respond(phone) {
+//             visibility: hidden;
+//         }
+//     }
 
-    &-icon {
-        height: 1.5rem;
-        width: 1.5rem;
-        fill: $color-grey-3;
-    }
-}
+//     &-icon {
+//         height: 1.5rem;
+//         width: 1.5rem;
+//         fill: $color-grey-3;
+//     }
+// }
 
-.user-nav {
+// .user-nav {
 
-    &>* {
-        padding: 0 .6rem;
-        cursor: pointer;
-        height: 100%;
-        display: flex;
-        align-items: center;
+//     &>* {
+//         padding: 0 .6rem;
+//         cursor: pointer;
+//         height: 100%;
+//         display: flex;
+//         align-items: center;
 
-        @include respond(phone) {
-            padding: 0 .3rem;
-        }
-    }
+//         @include respond(phone) {
+//             padding: 0 .3rem;
+//         }
+//     }
 
-    &>*:hover {
-        background-color: $color-grey-light;
-    }
+//     &>*:hover {
+//         background-color: $color-grey-light;
+//     }
 
-    &-icon-box {
-        position: relative;
-    }
+//     &-icon-box {
+//         position: relative;
+//     }
 
-    &-icon {
-        height: 2.25rem;
-        width: 2.25rem;
-        fill: $color-black-2;
+//     &-icon {
+//         height: 2.25rem;
+//         width: 2.25rem;
+//         fill: $color-black-2;
 
-        @include respond(phone) {
-            height: 1.25rem;
-            width: 1.25rem;
-            top: -.5rem;
-        }
-    }
+//         @include respond(phone) {
+//             height: 1.25rem;
+//             width: 1.25rem;
+//             top: -.5rem;
+//         }
+//     }
 
-    &-notification {
-        font-size: .8rem;
-        height: 1rem;
-        width: 1rem;
-        border-radius: 100%;
-        background-color: $color-blue;
-        color: #fff;
-        position: absolute;
-        top: .3rem;
-        right: .7rem;
+//     &-notification {
+//         font-size: .8rem;
+//         height: 1rem;
+//         width: 1rem;
+//         border-radius: 100%;
+//         background-color: $color-blue;
+//         color: #fff;
+//         position: absolute;
+//         top: .3rem;
+//         right: .7rem;
 
-        @include respond(phone) {
-            top: -.5rem;
-        }
-    }
+//         @include respond(phone) {
+//             top: -.5rem;
+//         }
+//     }
 
-    &-user-photo {
-        height: 2.5rem;
-        border-radius: 50%;
-        margin-right: .5rem;
+//     &-user-photo {
+//         height: 2.5rem;
+//         border-radius: 50%;
+//         margin-right: .5rem;
 
-        @include respond(phone) {
-            height: 1.5rem;
-        }
-    }
+//         @include respond(phone) {
+//             height: 1.5rem;
+//         }
+//     }
 
-    &-username {
-        @include respond(phone) {
-            display: none;
-        }
-    }
-}
+//     &-username {
+//         @include respond(phone) {
+//             display: none;
+//         }
+//     }
+// }
 
-.main-body {
-    flex: 1;
-    padding: 2rem;
+// .main-body {
+//     flex: 1;
+//     padding: 2rem;
 
-    @include respond(phone) {
-        padding: 1rem;
-    }
+//     @include respond(phone) {
+//         padding: 1rem;
+//     }
 
-    &-row {
-        @include respond(phone) {
-            display: flex;
-            flex-direction: column;
-        }
-    }
-}
+//     &-row {
+//         @include respond(phone) {
+//             display: flex;
+//             flex-direction: column;
+//         }
+//     }
+// }
