@@ -1,24 +1,3 @@
 .btn {
   font-family: inherit;
-  font-size: 1.1rem;
-  padding: .1rem .3rem;
-  margin: 2px;
-  text-align: center;
-  border: none;
-  display: inline-block;
-  cursor: pointer;
-  transition: all .7s;
-
-  // btn-block
-  &-block {
-    display: block;
-    width: 100%;
-  }
-
-  // btn-outline
-  &-outline {
-    background-color: transparent !important;
-    border: 1px solid;
-    color: inherit;
-  }
 }

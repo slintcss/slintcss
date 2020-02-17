@@ -4,7 +4,14 @@
   "description": "A css framework for faster development",
   "main": "app.js",
   "scripts": {
-    "compile:sass": "node-sass ./sass/main.scss ./css/slintcss.css -w",
+    "compile:sass": "node-sass ./sass/main.scss ./build/css/slintcss.css -w",
+    "minify-js": "uglifyjs ./dist/js/slintcss.js --output ./dist/js/slintcss.min.js",
+    "minify-css": "cleancss -o ./dist/css/slintcss.min.css ./dist/css/slintcss.css",
+    "prefix-css": "npx postcss ./build/css/slintcss.css --use autoprefixer -d ./dist/css",
+    "ts-watch": "tsc -w",
+    "ts-compile": "tsc",
+    "css-minifier": "npm run prefix-css && npm run minify-css",
+    "js-minifier": "npm run ts-compile && npm run minify-js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,6 +31,11 @@
   },
   "homepage": "https://github.com/slintcss/slintcss#readme",
   "devDependencies": {
-    "node-sass": "^4.13.0"
+    "node-sass": "^4.13.0",
+    "@types/jquery": "^3.3.32",
+    "autoprefixer": "^9.7.4",
+    "clean-css-cli": "^4.3.0",
+    "postcss-cli": "^7.1.0",
+    "uglify-js": "^3.7.7"
   }
 }

@@ -1,35 +1,15 @@
 .container-full {
   width: 100%;
-  min-height: 100vh;
-}
-
-.left-gutter {
-  margin-left: 20px;
-
-  @include responsive(phone) {
-    margin-left: 0;
-  }
-}
-
-.right-gutter {
-  margin-right: 20px;
-
-  @include responsive(phone) {
-    margin-right: 0;
-  }
+  min-height: 100%;
 }
 
 .container {
   margin: 0 auto;
   width: 70%;
-  transition: all 0.8s;
+  transition: width 0.8s;
 
   @include responsive(tab-port) {
     width: 100%;
     padding: 0 5px;
   }
-}
-
-.appbar-blue {
-  // background-color: $color-blue-2;
 }

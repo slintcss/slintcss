@@ -286,25 +286,25 @@
 //   }
 // }
 
-.appbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 50px;
-  max-height: 50px;
-  width: 100%;
-  background: inherit;
-  padding: 0 10%;
-  position: relative;
-  z-index: 5000;
-  transition: all 0.8s;
-  background-color: red;
+// .appbar {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   height: 50px;
+//   max-height: 50px;
+//   width: 100%;
+//   background: inherit;
+//   padding: 0 10%;
+//   position: relative;
+//   z-index: 5000;
+//   transition: all 0.8s;
+//   background-color: red;
 
-  @include responsive(tab-port) {
-    padding: 0 5%;
-  }
+//   @include responsive(tab-port) {
+//     padding: 0 5%;
+//   }
 
-  &-logo {
-    @include linkStyle;
-  }
-}
+//   &-logo {
+//     @include linkStyle;
+//   }
+// }

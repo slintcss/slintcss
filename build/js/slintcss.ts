@@ -1,23 +1,23 @@
 $(document).ready(function() {
   // Appbar
-  $(".appbar-burger").click(function() {
-    $(".appbar-list").toggleClass("appbar-list-active");
-    $(".appbar-item").each(function(index) {
+  $('.appbar-burger').click(function() {
+    $('.appbar-list').toggleClass('appbar-list-active');
+    $('.appbar-item').each(function(index) {
       if (this.style.animation) {
-        this.style.animation = "";
+        this.style.animation = '';
       } else {
         this.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 +
           0.5}s`;
       }
     });
-    $(".appbar-burger").toggleClass("appbar-toggle");
+    $('.appbar-burger').toggleClass('appbar-toggle');
   });
 
   // BottomAppBar
-  $(".bottomappbar-bars").click(function() {
-    $(".bottomappbar-list").addClass("bottomappbar-list-active");
+  $('.bottomappbar-bars').click(function() {
+    $('.bottomappbar-list').addClass('bottomappbar-list-active');
     $(document).scroll(function() {
-      $(".bottomappbar-list").removeClass("bottomappbar-list-active");
+      $('.bottomappbar-list').removeClass('bottomappbar-list-active');
     });
   });
 
@@ -50,10 +50,28 @@ $(document).ready(function() {
   const firstnameAndLastnameRegex = /^[a-zA-Z ]{2,15}$/;
   const emailRegex = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,10})$/;
   const passwordRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
-  const [fullName, firstName, lastName, email, password, invalidInput, formInputSuccess, formInputError] = [$("#fullname"), $("#firstname"), $("#lastname"), $("#email"), $("#password"), "invalid-input", "form-input-success", "form-input-error"];
+  const [
+    fullName,
+    firstName,
+    lastName,
+    email,
+    password,
+    invalidInput,
+    formInputSuccess,
+    formInputError
+  ] = [
+    $('#fullname'),
+    $('#firstname'),
+    $('#lastname'),
+    $('#email'),
+    $('#password'),
+    'invalid-input',
+    'form-input-success',
+    'form-input-error'
+  ];
 
   const formValidation = (inputName, regex) => {
-    inputName.keyup(function () {
+    inputName.keyup(function() {
       if (!regex.test(inputName.val())) {
         inputName.addClass(invalidInput);
         inputName.removeClass(formInputSuccess);
@@ -64,7 +82,7 @@ $(document).ready(function() {
         inputName.addClass(formInputSuccess);
       }
     });
-  }
+  };
 
   formValidation(fullName, fullnameRegex);
   formValidation(firstName, firstnameAndLastnameRegex);
@@ -72,9 +90,9 @@ $(document).ready(function() {
   formValidation(email, emailRegex);
   formValidation(password, passwordRegex);
 
-  $("#password2").keyup(function () {
-    const password2 = $("#password2");
-    if ($("#password").val() !== $("#password2").val()) {
+  $('#password2').keyup(function() {
+    const password2 = $('#password2');
+    if ($('#password').val() !== $('#password2').val()) {
       password2.addClass(invalidInput);
       password2.removeClass(formInputSuccess);
       password2.addClass(formInputError);
@@ -86,31 +104,31 @@ $(document).ready(function() {
   });
 
   // Modal Function
-  $("#modal").click(function() {
-    $(".modal").css("display", "block");
+  $('#modal').click(function() {
+    $('.modal').css('display', 'block');
   });
 
-  $(".modal-close").click(function () {
-    $(".modal").css("display", "none");
+  $('.modal-close').click(function() {
+    $('.modal').css('display', 'none');
   });
 
   $(window).click(function(e) {
-    const modal = document.querySelector("#s-model");
+    const modal = document.querySelector('#s-model');
     if (e.target === modal) {
-      $(".modal").css("display", "none");
+      $('.modal').css('display', 'none');
     }
   });
 
-  // Sidebar Toggle 
-  window.addEventListener("resize", function () {
-    if (window.matchMedia("(min-width: 900px)").matches) {
-      $(".sidebar").removeClass("sidebar-hide");
+  // Sidebar Toggle
+  window.addEventListener('resize', function() {
+    if (window.matchMedia('(min-width: 900px)').matches) {
+      $('.sidebar').removeClass('sidebar-hide');
     } else {
-      $(".sidebar").addClass("sidebar-hide");
+      $('.sidebar').addClass('sidebar-hide');
     }
   });
-  
-  $("#toggle-sidebar").click(function() {
-    $(".sidebar").toggleClass("sidebar-hide");
+
+  $('#toggle-sidebar').click(function() {
+    $('.sidebar').toggleClass('sidebar-hide');
   });
 });
