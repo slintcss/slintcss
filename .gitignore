@@ -7,3 +7,4 @@ package-lock.json
 .vscode
 yarn-error.log
 index.html
+/lib
