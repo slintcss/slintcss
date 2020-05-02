@@ -13,3 +13,19 @@
     padding: 0 5px;
   }
 }
+
+.center {
+  @include center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+// .flex {
+//   display: flex;
+// }
